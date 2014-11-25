@@ -11,10 +11,10 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body ng-app="de.cismet.angular.scopeDemos">
-        <div ng-controller="Example1Ctrl">
+        <div ng-controller="Example1Ctrl" id="ex1Ctrl">
             <div>
                 <h1> Simple Directive without scope option</h1>
-                <my-customer></my-customer>
+                <my-customer id="ex1Dir"></my-customer>
             </div>
             <div>
                 <label> Scope values</label>
@@ -24,11 +24,11 @@ and open the template in the editor.
 
         <hr>
 
-        <div ng-controller="Example2Ctrl">
+        <div ng-controller="Example2Ctrl" id="ex2Ctrl">
             <h1>Directive without scope : true</h1>
             <p>Scope Id: {{$id}}</p>
             <p>The red Box represents the custom scope of the directive. Hence the scope:true definition, the scopes inherit from each other.</p>
-            <my-customer-scope-true style="display:block;border: red 1px solid;padding:5px;">
+            <my-customer-scope-true id="ex2Dir" style="display:block;border: red 1px solid;padding:5px;">
             </my-customer-scope-true>
             <div>
                 <label> Scope values</label>
@@ -48,7 +48,7 @@ and open the template in the editor.
 
         <hr>
 
-        <div ng-controller="Example3Ctrl">
+        <div ng-controller="Example3Ctrl" id="ex3Ctrl">
             <h1>Directive with isolated scope</h1>
             <p>Scope Id: {{$id}}</p>
             <p>The red Box represents the custom scope of the directive. Hence the scope:{} definition, the scopes of the directive is isolated. The directive has no acces to the customer property</p>
@@ -93,7 +93,7 @@ and open the template in the editor.
                 ></my-customer-binding-options>
         </div>
 
-
+        <script src="bower_components/jquery/dist/jquery.js" type="text/javascript"></script>
         <script src="bower_components/angular/angular.js" type="text/javascript"></script>
 
         <script src="scripts/app.js" type="text/javascript"></script>

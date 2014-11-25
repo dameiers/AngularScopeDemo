@@ -9,7 +9,7 @@ angular.module(
             var ddo;
          
             ddo = {
-                templateUrl: 'templates/myCustomerScopeTrueTemplate.html',
+                templateUrl: 'templates/myCustomerIsolatedScopeTemplate.html',
                 restrict: 'E',
                 scope:{}
             };
